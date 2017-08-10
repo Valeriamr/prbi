@@ -1,0 +1,1663 @@
+$preto: #000
+$branco: #fff
+$primaria: #fa2f06 //laranja
+$prim-alt: #bb2305 // laranja escuro
+$secundaria: #145e75 //azul
+$blue-bg: #f0f3f3 //como funciona, azul claro
+
+body
+    font-weight: normal
+
+a
+    color: $prim-alt
+    cursor: pointer
+
+    &:hover
+        color: $primaria
+        opacity: 0.7
+
+=transition($velocity)
+    -webkit-transition: all $velocity ease-in-out
+    -moz-transition: all $velocity ease-in-out
+    -o-transition: all $velocity ease-in-out
+    transition: all $velocity ease-in-out
+
+
+.btn-default
+    width: 100%
+    background-color: darken($branco, 15%)
+    color: darken($branco, 60%) !important
+    font-size: 14px !important
+    font-weight: 300 !important
+    letter-spacing: 1px
+    text-transform: uppercase
+    border-radius: 0px
+    margin-top: 5px
+    border: none
+    border-bottom: 3px solid darken($branco, 30%)
+    box-shadow: none
+    padding: 10px
+
+
+#kc-fixed
+    position: fixed
+    top: 0
+    left: 50%
+    z-index: 99
+    margin-left: -73px
+
+
+
+.form-sendy 
+    margin: 20px 0 40px 0
+    padding: 10px
+    background: rgba(0, 0, 0, 0.03)
+
+    img 
+        max-width: 100%
+        margin-bottom: 10px
+
+    label 
+        color: #145e75
+
+    input[type=text], input[type=email] 
+        width: 95%
+        display: block
+        font-size: 16px
+        padding: 3px 5px
+        margin-bottom: 10px
+
+    input[type=submit] 
+        width: 100%
+        background: #fa2f06
+        color: #fff
+        display: block
+        padding: 5px 8px
+        border: none
+        text-transform: uppercase
+        letter-spacing: 1px
+        text-align: center
+
+
+.modal 
+    position: fixed !important
+
+
+    .modal .form-sendy 
+        margin: 0
+    
+
+
+.box-shadow
+    box-shadow: 0 7px 10px rgba($preto, 0.4)
+
+
+#header
+    padding: 20px 0
+    background: url(../images/home/tour-bg.png) top repeat-x
+    background-size: auto 150px
+
+    .main-nav
+        padding-top: 15px
+
+        ul.list-inline
+            float: right
+
+        .menu-ancora
+            font-size: 13px
+            color: darken($branco, 60%)
+            margin-bottom: 15px
+
+            a
+                color: darken($branco, 60%)
+                text-transform: uppercase
+                font-size: 14px
+                font-weight: 300
+                vertical-align: baseline
+
+                &.login
+                    color: $primaria
+                    font-weight: bold
+
+            li
+                & > a
+                    padding-left: 5px
+
+
+            li.user-menu
+                min-width: 158px
+                background: $primaria url(../images/user-menu-dropdown.png) right 10px center no-repeat
+                color: $branco
+                height: 32px
+                padding: 5px
+                margin-top: -5px
+                margin-left: 25px
+                position: relative
+                vertical-align: middle
+                cursor: pointer
+                position: relative
+                text-align: center
+
+                & > a
+                    color: $branco
+
+                &:hover
+                    ul.sub-menu
+                        display: block
+
+                ul.sub-menu
+                    animation: fadeInUp 300ms
+                    display: none
+                    top: 100%
+                    padding: 5px 0
+                    width: 158px
+
+                    li
+                        margin: 0
+                        padding: 0
+                        a
+                            display: block
+                            padding: 3px 8px
+                            &:hover
+                                color: $primaria
+                                font-weight: bold
+
+                img
+                    background: $primaria
+                    border: 4px solid #072c37
+                    height: 38px
+                    width: 38px
+                    position: absolute
+                    top: -3px
+                    left: -22px
+                    z-index: 9999
+
+
+        .main-menu
+            a
+                color: $preto
+                font-size: 24px
+                font-weight: 300
+                text-transform: uppercase
+                padding-left: 2px
+                // padding-right: 2px
+
+                &:hover
+                    color: $primaria
+
+
+    .nav-pills
+        margin-bottom: 25px
+
+        li
+            float: right
+
+        li.enviar-menu
+            i
+                font-size: 15px
+                margin-right: 5px
+            a
+                
+                padding: 3px 8px 0 8px
+                background: $primaria
+                border-bottom: 4px solid darken($primaria, 15%)
+                text-transform: uppercase
+                font-size: 12px
+                color: $branco
+
+    .navbar-brand
+        h1
+            margin-top: -40px
+
+    .navbar-nav.navbar-right 
+        li 
+            a
+                font-size: 24px
+                padding: 0px 0 10px 20px
+
+        li.dropdown
+            ul.sub-menu
+                li
+                    a
+                        &:hover
+                            color: $branco
+
+    .config-menu
+        .navbar-nav.navbar-right 
+            li
+                a
+                    font-size: 14px
+                    color: lighten($preto, 50%)
+
+                    &:hover
+                        opacity: 1
+                        color: $primaria
+            li.dropdown
+                ul.sub-menu
+                    li
+                        a
+                            &:hover
+                                color: $branco
+
+
+.home
+    .action
+        background: url('../images/home/tour-bg.png') repeat-x
+        background-size: auto 100%
+        padding: 20px 0
+    
+    h2
+        color: $secundaria
+
+
+    #blog
+        margin-top: 50px
+
+        .single-blog
+            padding-bottom: 10px
+
+.services
+    margin-top: 100px
+
+.service-item
+    margin-bottom: 50px
+
+h2.post-title
+    font-size: 18px
+    font-weight: 700
+    height: 70px
+    overflow: hidden
+
+.post-title 
+    a
+        color: #145e75
+        &:hover
+            opacity: 0.7
+
+.single-blog.timeline 
+    .post-thumb
+        height: auto
+    a
+        &:hover
+            opacity: 0.8
+
+.slideshow
+    margin: 20px 0 30px 0
+
+    .carousel
+        background: $secundaria
+
+        .item
+            overflow: hidden
+            .slide-img
+                overflow: hidden
+                text-align: center
+                float: left
+                max-height: 400px
+                max-width: 600px
+                
+                img
+                    max-height: 400px
+                    max-width: 600px
+                    height: 100%
+                    width: auto
+            .carousel-caption
+                float: left
+                position: static
+                text-align: left
+                padding-left: 30px
+                width: 400px
+                p
+                    font-size: 14px
+                    font-style: italic
+                
+                small
+                    display: inline-block
+                    background: rgba($preto, 0.2)
+                    color: $branco
+                    font-size: 12px
+                    padding: 3px 5px
+                    margin: 0 0 20px 0
+                    line-height: 1
+
+                    &.novo
+                        background: $primaria
+                        color: $branco
+
+                h3
+                    font-size: 28px
+                    font-style: normal
+                    margin: 0 0 20px 0
+                    a
+                        color: $branco
+                        font-weight: bold
+
+                .cta
+                    margin-top: 20px
+
+
+.theme-listing
+    .col-sm-4
+        &:nth-child(4)
+            clear: left
+
+.single-blog
+
+    .post-thumb
+        height: 140px
+
+    .theme-description
+        height: 50px
+        overflow: hidden
+
+.post-nav li a, .post-nav li a i, .post-content .post-author a, a.read-more
+    color: #fa2f06
+
+.main-slider
+    z-index: 99
+
+.entry 
+    font-size: 1.5em
+    font-weight: 300
+    line-height: 1.5
+    text-align: left
+    color: #666
+
+#page-breadcrumb
+    background-color: #fff
+    background-size: auto 100%
+
+span.title
+    font-family: 'Lato', sans-serif
+    text-transform: uppercase
+    font-size: 12px
+    letter-spacing: 2px
+    color: #333
+
+.action 
+    p
+        font-style: italic
+    h1
+        font-size: 36px
+        color: #145e75
+        margin-top: 5px
+        margin-bottom: 20px
+
+
+.post-content
+    .post-nav 
+        li 
+            a
+                text-align: center
+
+
+.panel
+    a
+        color: $secundaria
+
+.panel-primary
+    border-color: $secundaria
+
+    >.panel-heading
+        background-color: $secundaria
+        border-color: $secundaria
+
+td.redacao-titulo
+    font-size: 16px
+
+td.redacao-acao
+    .btn, .btn-xs
+        font-size: 16pxs
+    .btn-danger
+        padding: 1px 8px
+
+
+.single-blog.blog-details 
+    .post-content
+        &:first-child
+            padding-top: 0 !important
+
+
+.blue-bg, .white-bg
+    padding: 40px 0
+
+    h2
+        color: $primaria
+        font-weight: bold
+        text-transform: uppercase
+
+        span
+            background: darken($branco, 25%)
+            color: $branco
+            display: inline-block
+            border-radius: 100px
+            height: 40px
+            width: 40px
+            padding-top: 7px
+            margin-right: 5px
+
+    h3
+        color: darken($branco, 30%)
+        font-size: 22px
+        font-weight: bold
+        text-transform: uppercase
+        margin-bottom: 30px
+
+    h4
+        margin-top: 25px
+        color: $secundaria
+        font-weight: bold
+
+
+.blue-bg
+    background: $blue-bg url(../images/como-funciona/blue-background.png) top -1px left repeat-x
+
+.white-bg
+    background: url(../images/como-funciona/white-background.png) top left repeat-x
+
+
+
+
+
+
+
+.correcao
+    h2
+        color: $primaria
+        text-align: center
+
+.pergunta-item
+    i
+        margin-right: 6px
+        color: $primaria
+
+.a-redacao
+    .entry
+        color: darken($branco, 40%)
+        font-size: 1.15em
+        line-height: 1.5em
+
+.comentario-professor
+    .entry
+        color: darken($branco, 80%)
+
+.steps
+    padding: 0 0 50px 0
+    header
+        margin-bottom: 30px
+
+    h2
+        color: $primaria
+        font-weight: bold
+        text-transform: uppercase
+
+        span
+            background: darken($branco, 25%)
+            color: $branco
+            display: inline-block
+            border-radius: 100px
+            height: 40px
+            width: 40px
+            padding-top: 7px
+            margin-right: 5px
+
+    h3
+        color: darken($branco, 30%)
+        font-size: 22px
+        font-weight: bold
+        text-transform: uppercase
+        margin-bottom: 30px
+
+    h4
+        margin-top: 25px
+        color: $secundaria
+        font-weight: bold
+
+.tipo-correcao
+    .profissional, .colaborativa, .keep-calm
+        background: $blue-bg
+        padding-top: 15px
+        padding-bottom: 15px
+        cursor: pointer
+        border-radius: 4px
+        position: relative
+        +transition(0.2s)
+
+        &:hover
+            background: darken($blue-bg, 5%)
+
+        &.ativo
+            background: lighten($primaria, 40%)
+            position: relative
+            &:before
+                content: ''
+                position: absolute
+                bottom: -32px
+                left: 50%
+                margin-left: -8px
+                height: 16px
+                width: 16px
+                border: 16px solid lighten($primaria, 40%)
+                border-left: 16px solid transparent
+                border-right: 16px solid transparent
+                border-bottom: 16px solid transparent
+
+
+            h4
+                color: $prim-alt
+
+            strong
+                color: $primaria
+
+
+        h4
+            margin: 0
+
+    
+
+    .profissional
+        border-right: 2px solid $branco
+        img
+            float: left
+            margin-right: 8px
+            width: 30%
+
+        .texto
+            float: right
+            width: 65%
+
+            strong
+                color: $primaria
+
+
+    .colaborativa
+        border-left: 2px solid $branco
+        img
+            float: right
+            margin-right: 8px
+            width: 30%
+
+        .texto
+            float: left
+            width: 65%
+
+            a
+                color: $secundaria
+
+                &:hover
+                    text-decoration: underline
+
+    .keep-calm
+        background: $blue-bg
+        padding-top: 15px
+        padding-bottom: 15px
+        cursor: pointer
+        border-radius: 4px
+        position: relative
+        +transition(0.2s)
+
+        &:hover
+            background: darken($blue-bg, 5%)
+
+        &.ativo
+            background: lighten($secundaria, 10%)
+            position: relative
+            color: $branco
+            &:before
+                content: ''
+                position: absolute
+                bottom: -32px
+                left: 50%
+                margin-left: -8px
+                height: 16px
+                width: 16px
+                border: 16px solid lighten($secundaria, 10%)
+                border-left: 16px solid transparent
+                border-right: 16px solid transparent
+                border-bottom: 16px solid transparent
+
+
+            h4
+                color: $branco
+
+            strong
+                color: $branco
+
+
+        h4
+            margin: 0
+
+
+
+        img
+            float: left
+            margin-right: 8px
+            width: 30%
+
+        .texto
+            float: right
+            width: 65%
+
+            strong
+                color: $primaria
+
+
+
+.blog-pagination
+    font-size: 16px
+    a, span, em
+        display: inline-block
+        padding: 2px 4px
+        font-style: normal
+        border: 1px solid darken($branco, 10%)
+        margin: 0
+        text-align: center
+        width: 30px
+        height: 30px
+        border-radius: 4px
+
+        &:hover
+            background: darken($branco, 10%)
+
+    .disabled, em.current
+        color: lighten($preto, 70%)
+        cursor: default
+        background: darken($branco, 10%)
+
+    a
+        color: $primaria
+
+        &:hover
+            background: $primaria
+            color: $branco
+            opacity: 1
+
+
+
+.form-envio
+    .enviar-row
+        border-radius: 4px
+        padding: 20px
+        background: $blue-bg
+    
+    .tema
+        font-family: 'Lato', sans-serif
+        font-size: 22px
+        color: darken($branco, 50%)
+
+    .input-lg
+        height: auto
+        font-size: 28px
+
+    h3
+        small
+            display: block
+            text-transform: none
+
+    .enviar-foto, .enviar-texto
+        display: block
+        text-align: center
+        padding: 20px 0
+        font-weight: bold
+        background: #e6e6e6
+        color: #999
+        position: relative
+        span
+            display: block
+            height: 52px
+        &:hover, &.active
+            color: #a2816c
+            background: #e8c0a8
+            span
+                background-position: center bottom
+
+        &.active
+            &:after
+                content: ''
+                position: absolute
+                bottom: -32px
+                left: 50%
+                margin-left: -14px
+                height: 16px
+                width: 16px
+                border: 16px solid #e8c0a8
+                border-left: 16px solid transparent
+                border-right: 16px solid transparent
+                border-bottom: 16px solid transparent
+
+    .enviar-foto
+        span
+            background: url(../images/enviar/enviar-foto.png) center top no-repeat
+
+    .enviar-texto
+        span
+            background: url(../images/enviar/enviar-texto.png) center top no-repeat
+
+
+    .foto-selected, .texto-selected
+        margin: 20px 0
+        background: #e6e6e6
+        padding: 20px
+
+    .checkbox
+        margin: 30px 0
+        h4
+            margin: 0
+    .enviar
+        margin: 30px 0
+table.correcoes
+    font-size: 16px
+
+    h3
+        margin: 0
+        font-size: 12px
+        text-transform: uppercase
+        color: $primaria
+        font-weight: bold
+
+    th
+        color: darken($branco, 25%)
+        padding-bottom: 20px
+        text-transform: uppercase
+
+    td
+        vertical-align: top
+        padding-bottom: 30px
+    
+    td.competencia
+        width: 45%
+
+    td.nota
+        text-align: center
+        width: 15%
+        font-size: 24px
+        font-weight: bold
+        color: $secundaria
+
+    td.comentario
+        width: 40%
+
+    td.nota-total
+        line-height: 1
+        padding: 15px 0 20px 0
+        font-size: 40px
+        font-weight: bold
+        color: $secundaria
+        text-align: center
+        background: darken($branco, 8%)
+
+        span
+            line-height: 1.5
+            display: block
+            font-size: 20px
+            text-transform: uppercase
+            color: darken($branco, 40%)
+            font-weight: bold
+
+
+// pagina de planos
+.planos
+    position: relative
+    padding-bottom: 20px
+    margin-top: 0
+    background: #072c37 url(../images/footer/stars-footer.png) center no-repeat
+    color: $branco
+    font-size: 18px
+
+    small
+        font-size: 12px
+        text-transform: uppercase
+        display: block
+
+    &:before
+        content: ''
+        display: block
+        background: url('../images/footer/foguete.png') no-repeat
+        background-size: 100% auto
+        height: 118px
+        width: 140px
+        position: absolute
+        top: -30px
+        left: 50%
+        margin-left: -59px
+        -webkit-animation-name: Floatingx
+        -webkit-animation-duration: 3s
+        -webkit-animation-iteration-count: infinite
+        -webkit-animation-timing-function: ease-in-out
+        -moz-animation-name: Floating
+        -moz-animation-duration: 3s
+        -moz-animation-iteration-count: infinite
+        -moz-animation-timing-function: ease-in-out
+
+    .clouds
+        height: 98px
+        margin-bottom: 5px
+        background: url(../images/footer/clouds-footer.png) top repeat-x
+
+    .clouds-bottom
+        position: absolute
+        bottom: -110px
+        left: 0
+        right: 0
+        height: 110px
+        margin-bottom: 20px
+        background: url(../images/footer/clouds-bottom.png) top repeat-x
+        z-index: 99
+
+    h1
+        margin: 0
+        font-size: 28px
+        font-weight: bold
+        font-style: italic
+        color: $branco
+
+    ul.assinar-list
+        li
+            width: 160px
+            display: inline-block
+    ul.planos-list
+        // height: 173px
+        li
+            display: inline-block
+            width: 160px
+            vertical-align: top
+            border-radius: 4px
+            // border: 1px solid $branco
+            margin-right: 20px
+            position: relative
+            padding: 10px
+            background: rgba($branco, 0.05)
+            +transition(0.2s)
+
+            &:last-child
+                margin-right: 0
+
+            h3
+                font-size: 20px
+                font-weight: bold
+                font-style: italic
+                margin-bottom: 5px
+            
+            p
+                font-size: 26px
+                line-height: 1.1
+                span
+                    margin-top: 5px
+                    margin-bottom: 5px
+                    font-weight: 300
+                    font-size: 14px
+                    display: block
+
+                    &:last-child
+                        margin-top: 0
+
+                &.dados-plano
+                    height: 80px
+
+
+            &.melhor-plano
+                position: relative
+
+                &:before
+                    font-size: 24px
+                    font-family: 'FontAwesome'
+                    content: '\f005'
+                    position: absolute
+                    top: -22px
+                    left: 50%
+                    margin-left: -10px
+                    z-index: 99
+                    color: #f1d863
+                    text-shadow: 0 0 5px #f1d863
+
+                &:after
+                    position: absolute
+                    font-size: 11px
+                    // content: 'Melhor Plano'
+                    content: 'Economize 60% at\00e9 10/12'
+                    text-transform: uppercase
+                    top: -6px
+                    left: 5px
+                    right: 5px
+                    // margin-left: -50px
+                    color: $branco
+                    background: $primaria
+                    z-index: 98
+                    text-shadow: 0 0 5px #f1d863
+                    // width: 100px
+                    border-radius: 8px
+
+                // &:hover
+                //     &:after
+                //         display: block
+
+section.features
+    background: #041B22
+    color: $branco
+    position: relative
+    padding: 150px 0 140px 0
+
+    .clouds
+        position: absolute
+        bottom: 0
+        left: 0
+        right: 0
+        height: 98px
+        background: url(../images/footer/clouds.png) top repeat-x
+
+
+    h2
+        margin: 0
+        font-size: 28px
+        font-weight: bold
+        font-style: italic
+        color: $branco
+
+    ul.features-list
+        margin: 10px 0 80px 0
+        padding: 0 
+        text-align: center
+
+        li
+            display: inline-block
+            width: 160px
+            height: 80px
+            vertical-align: top
+            margin-right: 20px
+            text-align: center
+            padding-top: 30px
+            padding-left: 10px
+            padding-right: 10px
+            font-size: 20px
+            font-weight: 300
+            font-style: italic
+
+            &:last-child
+                margin-right: 0
+
+            h3
+                font-size: 20px
+                font-weight: bold
+                font-style: italic
+
+            p
+                font-size: 20px
+                line-height: 1
+                span
+                    font-weight: 300
+                    font-size: 14px
+                    display: block
+    
+            .glyphicon
+                font-size: 36px
+                display: block
+                margin-bottom: 10px
+
+
+.planos-depo
+    padding: 50px 0 0 0
+
+    h2
+        color: $primaria
+        font-style: italic
+        font-weight: 700
+        margin: 0
+
+    p.lead
+        margin-bottom: 40px
+        font-style: italic
+
+
+                        
+
+
+
+// span.price.after
+.table-heading.after
+    position: relative
+
+    &::after
+        content: 'por corre\00e7\00e3o'
+        position: absolute
+        right: 0
+        bottom: 10px
+        color: darken($branco, 40%)
+        font-size: 12px
+        line-height: 12px
+        text-align: center
+        font-family: 'Lato', sans-serif
+        z-index: 99
+        -ms-transform: rotate(-5deg)
+        -webkit-transform: rotate(-5deg)
+        transform: rotate(-5deg)
+
+    
+    &::before
+        padding-top: 33px
+        background: url(../images/seta-economize.png) top center no-repeat
+        text-align: center
+        position: absolute
+        right: 0
+        bottom: 30px
+        color: $secundaria
+        font-size: 26px
+        line-height: 12px
+        font-family: 'Lato', sans-serif
+        z-index: 99
+        -ms-transform: rotate(-5deg)
+        -webkit-transform: rotate(-5deg)
+        transform: rotate(-5deg)
+    
+    &.trimestral:before
+        content: 'R$ 4,72'
+    &.semestral:before
+        content: 'R$ 4,22'
+    &.anual:before
+        content: 'R$ 5,47'
+
+
+#footer
+    padding-bottom: 50px
+    margin-top: 50px
+    background: #072c37 url(../images/footer/stars-footer.png) center no-repeat
+    color: $branco
+    font-weight: 300
+
+    .clouds
+        height: 98px
+        margin-bottom: 100px
+        background: url(../images/footer/clouds-footer.png) top repeat-x
+
+    a
+        color: #729eac
+    
+    h3
+        font-weight: bold
+        text-transform: uppercase
+        color: #d0dfe3
+        font-size: 16px
+        margin: 0
+        margin-bottom: 5px
+
+    .pitch
+        font-style: italic
+        font-size: 16px
+
+    .col-nav-footer
+        font-size: 16px
+        
+        ul
+            padding: 0 0 20px 0
+        li
+            line-height: 1.35
+
+
+.sidebar
+    .item
+        margin-bottom: 40px
+    .pub
+        margin: 20px 0
+
+
+.redacao
+    margin: 0 0 40px 0
+    font-size: 1.5em
+    font-weight: 300
+    line-height: 1.5
+    text-align: left
+    color: #666
+
+
+#basefooter
+    background: #041b22
+    color: #145e75
+    padding: 10px 0
+    font-style: italic
+
+
+
+
+
+
+
+
+
+
+#keep-calm
+    padding: 20px 0 80px 0
+    background: url(../images/keep-calm/background.jpg) center no-repeat
+    background-size: cover
+    position: relative
+
+
+    &:after
+        background: url(../images/keep-calm/clouds.png) top left repeat-x
+        content: ''
+        display: block
+        position: absolute
+        height: 85px
+        width: 100%
+        bottom: 0
+        left: 0
+
+    br
+        padding: 0
+
+    a
+        color: $branco
+        text-decoration: underline
+
+        &:hover
+            text-decoration: none
+
+    .texto-kc-home
+        color: $branco
+        font-size: 1.2em
+        font-weight: 300
+        margin-top: 80px
+        text-align: right
+
+        h2
+            color: $branco
+            font-size: 2em
+            margin-bottom: 20px
+            font-style: italic
+        
+        p.assinar
+            margin: 20px 0
+
+            a
+                text-decoration: none
+
+    .imagem-kc-home
+        text-align: left
+
+    .floating
+        margin-left: 0
+
+
+
+
+#depoimento
+    blockquote
+        line-height: 1.3
+        border: none
+        font-size: 1.8em
+        color: darken($branco, 70%)
+        font-weight: 300
+        font-style: italic
+
+        img
+            float: left
+            margin-right: 15px
+            margin-bottom: 15px
+            max-width: 20%
+
+        cite
+            font-size: 1.1em
+
+    .carousel-indicators
+        bottom: -20px
+        z-index: 9999
+
+        li
+            border: 1px solid $primaria
+
+            &.active
+                background: $primaria !important
+
+
+
+.pagarme
+    font-family: 'Lato'
+    font-style: italic
+    font-size: 16px
+    color: rgba($preto, 0.5)
+    text-decoration: none
+    margin: 30px 0 0 0
+    background: none
+    border: none
+
+    &:hover
+        text-decoration: underline
+        color: $primaria
+
+
+
+.call-action-lista
+    .btn-default
+
+    .glyphicon
+        font-size: 30px
+        margin-right: 5px
+
+
+
+.current-section
+    background: darken($branco, 90%)
+    margin-bottom: 40px
+    max-height: 420px
+    overflow: hidden
+
+    .nav-videos
+        height: 420px
+        overflow: auto
+        padding: 0
+        background: rgba($branco, 0.1)
+
+        ul
+            padding: 0
+            margin: 0
+
+            li
+                padding: 0
+                font-size: 16px
+                position: relative
+                +transition(.2s)
+
+                &:hover
+                    background: darken($branco, 55%)
+
+                    a
+                        color: $branco
+
+                // &:after
+                //     content: '\f105'
+                //     display: block
+                //     position: absolute
+                //     top: 50%
+                //     margin-top: -13px
+                //     right: 4%
+                //     font-size: 32px
+                //     opacity: 0.2
+                //     font: normal normal normal 24px/1 FontAwesome
+
+                a
+                    color: darken($branco, 50%)
+                    font-weight: 700
+                    display: block
+                    padding: 1em 1.2em
+
+                h3
+                    margin: 0
+                    padding: 0
+
+
+
+                &.active
+                    background: darken($branco, 10%)
+                    color: $secundaria
+
+                    a
+                        color: $secundaria
+
+                    &:hover
+                        background: $branco
+
+
+.playlist
+    .video-title
+        overflow: hidden
+        margin-bottom: 20px
+
+        h1
+            font-weight: 700
+            margin: 0
+            padding: 0
+            color: $secundaria
+
+    a
+        color: $secundaria
+        font-weight: 700
+
+    .desc
+        color: darken($branco, 60%)
+    
+    ul.nav
+        li
+            i
+                margin-right: 5px
+            &.active
+                a
+                    color: $secundaria
+        a
+            font-size: 16px
+            color: darken($branco, 50%)
+
+    ul.aulas
+        box-shadow: 0 5px 15px rgba($preto, 0.15)
+        background: $branco
+        padding: 0
+
+        li
+            padding: 0
+            font-size: 16px
+            position: relative
+            +transition(.2s)
+
+            &:hover
+                background: darken($branco, 5%)
+
+            // &:after
+            //     content: '\f105'
+            //     display: block
+            //     position: absolute
+            //     top: 50%
+            //     margin-top: -13px
+            //     right: 4%
+            //     font-size: 32px
+            //     opacity: 0.2
+            //     font: normal normal normal 24px/1 FontAwesome
+
+            a
+                color: $secundaria
+                font-weight: 700
+                display: block
+                padding: 1em 1.2em
+
+            h3
+                margin: 0
+                padding: 0
+
+
+
+            &.active
+                background: $secundaria
+                color: $branco
+
+                a
+                    color: $branco
+
+                &:hover
+                    background: lighten($secundaria, 5%)
+
+
+.lista-curso
+    a
+        color: $secundaria
+
+    article.aula
+        margin-bottom: 20px
+
+        h2
+            margin: 0
+            padding: 0
+
+
+// correcao por imagem
+.show-annotator-dialog
+    border: none !important
+    box-shadow: 0 0 10px rgba($preto, 0.5)
+    border-radius: 0 !important
+
+button.show-annotator-dialog-button
+    border: none
+    font-family: 'Lato', sans-serif
+    text-transform: none
+    font-weight: normal
+    font-style: italic
+    box-shadow: none
+    background: none
+    color: darken($branco, 50%)
+    float: left
+
+button.save-button
+    text-transform: uppercase
+    font-style: normal
+    background: $primaria
+    color: $branco
+    float: right
+
+div.show-annotator-dialog
+    height: 110px
+
+textarea.show-annotator-dialog-textarea
+    height: 65%
+    border: 1px solid darken($branco, 30%)
+    border-radius: 0
+
+
+.annotator
+    margin-top: -20px
+    margin-left: -20px
+    width: 40px
+    height: 40px
+    background: rgba($primaria, 0.7)
+    border-width: 2px
+
+
+
+
+
+
+@media (min-width: 768px) and (max-width: 1199px)
+    .slideshow
+        .item
+            .slide-img
+                max-width: 50%
+
+            .carousel-caption
+                max-width: 40%
+
+
+@media (min-width: 768px) and (max-width: 1024px)
+
+    #header
+        .main-menu 
+            ul.list-inline
+                display: block
+    .planos
+        ul.planos-list
+
+            li
+                width: 21%
+
+                &.active 
+                    width: 21%
+
+                    p
+                        font-size: 24px
+
+    section.features 
+        ul.features-list 
+            li
+                margin: 0 10px 20px 0
+
+                &:last-child
+                    margin: 0 10px 20px 0
+
+
+
+
+
+@media (max-width: 767px)
+    
+
+    .slideshow
+        .carousel
+            .item
+                .slide-img
+                    float: none
+                    height: 150px
+                    text-align: center
+                    img
+                        margin: 0 auto
+                        width: 100% 
+                        height: auto 
+
+                .carousel-caption
+                    float: none
+                    margin: 0 auto
+                    padding: 15px
+                    width: 100%
+                    height: 280px
+                    text-align: center
+
+                    h3
+                        font-size: 16px
+
+
+
+
+    .navbar-brand img 
+        max-height: 100px
+    
+    body
+        padding-top: 100px
+
+    #kc-fixed
+        top: 50px
+        z-index: 99999
+    
+    #header
+        .logo
+            img
+                width: 50%
+        .main-nav
+            ul.list-inline
+                float: none
+
+            .menu-ancora
+                background: $branco
+                position: fixed
+                top: 0
+                left: 0
+                width: 100%
+                z-index: 9999
+                box-shadow: 0 10px 10px rgba($preto, 0.15)
+                padding: 4px 0 0 0 
+
+
+                ul.list-inline
+                    float: none
+                    text-align: center
+
+                    li.user-menu
+                        display: block
+                        position: absolute
+                        top: 0
+                        left: 0
+                        right: 0
+                        margin: 0
+                        height: 40px
+                        box-shadow: 0 10px 10px rgba($preto, 0.15)
+
+                        & > a
+                            display: block
+                            padding-top: 5px
+
+                        img
+                            top: 0
+                            left: 5px
+                            height: 50px
+                            width: 50px
+
+                        &.active
+                            ul.sub-menu
+                                display: block
+                        ul.sub-menu
+                            display: none
+                            width: auto
+                            position: absolute
+                            top: 100%
+                            left: 0
+                            right: 0
+                            background: $branco
+                            box-shadow: 0 10px 10px rgba($preto, 0.15)
+                            padding: 10px 0
+
+                            li
+                                a
+                                    font-size: 16px
+                                    padding: 7px 0
+
+        .main-menu
+            text-align: center
+            margin-top: 20px
+            
+            a#menu-mobile
+                font-size: 18px
+                font-weight: 400
+                color: darken($branco, 60%)
+                margin-bottom: 15px
+                display: block
+                i
+                    border: 1px solid darken($branco, 40%)
+                    padding: 3px 5px
+
+            ul.list-inline
+                float: none
+                background: darken($branco, 8%)
+                padding: 20px 0
+                display: none
+
+                li
+                    display: block
+                    text-align: center
+                    margin: 10px 0
+    .planos
+        ul.planos-list
+            margin: 0
+            padding: 0
+            height: auto
+
+            li
+                margin: 0 auto 30px auto
+                display: block
+
+                &.melhor-plano
+                    margin: 0 auto 30px auto
+
+    
+    .features
+        ul.features-list
+            padding: 0
+            margin: 0
+            text-align: center
+
+            li
+                margin: 0 0 20px 0 !important
+
+                    
+
+
+    #home-slider 
+        margin-top: 0
+        .main-slider
+            max-width: 100%
+            height: 250px
+    #keep-calm            
+        .texto-kc-home
+            text-align: center
+
+        .imagem-kc-home
+            text-align: center
+
+        .floating
+            float: none
+            margin: 20px auto
+
+    a.toggle-button
+        display: block
+        background: darken($branco, 8%)
+        color: $secundaria
+        padding: 10px 0
+        font-size: 16px
+        text-transform: uppercase
+
+        &:hover
+            background: darken($branco, 10%)
+
+        &:focus, &:active
+            background: $branco
+
+    .current-section
+        .nav-videos
+            height: auto
+            ul
+                padding-right: 15px
+                display: none
+
+    #footer
+        .pitch
+            margin: 20px 0 40px 0

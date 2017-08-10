@@ -1,0 +1,13 @@
+!!! Strict
+%html
+  %head
+    %meta{:content => "text/html; charset=utf-8", "http-equiv" => "Content-type"}/
+    %title Dashboard BI
+    = javascript_include_tag 'jquery','bootstrap.min','wow.min','jquery.validate.min','main.min', 'smartbanner.min'
+  %body
+    = yield
+
+
+
+  -if content_for?(:js)
+    =yield_content :js

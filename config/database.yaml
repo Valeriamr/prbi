@@ -1,0 +1,82 @@
+development:
+  sessions:
+    options:
+  clients: #Replace clients with sessions to work with Mongoid version 3.x or 4.x
+    default:
+      database: prod_projetoredacao
+      hosts:
+        - localhost:27017
+  options:
+    raise_not_found_error: false
+
+
+#development:
+# clients: #Replace clients with sessions to work with Mongoid version 3.x or 4.x
+#   default:
+#     database: prod_projetoredacao
+#     hosts:
+#       - c273.candidate.1.mongolayer.com:10273
+#     options:
+#       user: 'projred'
+#       password: 'q1w2e3@'
+# options:
+#   raise_not_found_error: false
+
+
+
+production:
+ clients: #Replace clients with sessions to work with Mongoid version 3.x or 4.x
+   default:
+     database: prod_projetoredacao
+     hosts:
+       - c273.candidate.1.mongolayer.com:10273
+     options:
+       user: 'projred'
+       password: 'q1w2e3@'
+ options:
+   raise_not_found_error: false
+
+
+test:
+  clients: #Replace clients with sessions to work with Mongoid version 3.x or 4.x
+    default:
+      database: sandbox_projetoredacao
+      hosts:
+        - c273.candidate.1.mongolayer.com:10273
+      options:
+        user: 'prsand'
+        password: 'UhhASdITM2376'
+  options:
+   raise_not_found_error: false
+
+
+
+#mongorestore --db=prod_projetoredacao --host=c273.candidate.1.mongolayer.com --username=projred --password=q1w2e3@ --port=10273 /Volumes/DADOS/www/backups/projetoredacao/dumps/2017_03_04/bck1/dump/prod_projetoredacao
+#mongorestore --db=sandbox_projetoredacao --host=c273.candidate.1.mongolayer.com --username=prsand --password=UhhASdITM2376 --port=10273 /Volumes/DADOS/www/backups/projetoredacao/dumps/2017_03_04/bck1/dump/prod_projetoredacao
+
+
+
+#Local como Prod
+# development:
+#   clients: #Replace clients with sessions to work with Mongoid version 3.x or 4.x
+#     default:
+#       database: prod_projetoredacao
+#       hosts:
+#         - c273.candidate.1.mongolayer.com:10273
+#       options:
+#         user: 'projred'
+#         password: 'q1w2e3@'
+#   options:
+#     raise_not_found_error: false
+
+
+# Local como Sandbox
+#development:
+#  clients: #Replace clients with sessions to work with Mongoid version 3.x or 4.x
+#    default:
+#      database: sandbox_projetoredacao
+#      hosts:
+#        - c273.candidate.1.mongolayer.com:10273
+#      options:
+#        user: 'prsand'
+#        password: 'UhhASdITM2376'

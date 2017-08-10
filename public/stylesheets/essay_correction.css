@@ -1,0 +1,101 @@
+
+.annotator {
+	border-radius: 50%;
+	position: absolute;
+	margin-top: -5px;       /* - radius px */
+	margin-left: -5px;      /* - radius px */
+	opacity: 0.3;
+	behavior: url(PIE.htc); /* IE8 compatibility */
+	width: 10px;            /* 2*radius */
+	height: 10px;           /* 2*radius */
+	background: rgb(255,255,10);
+	opacity: 0.3;
+	border: 1px solid red;
+	cursor: pointer;
+}
+
+.essay-image-parent {
+	position: relative;
+	background-color: lightgray;
+	margin-top: 0px;
+	margin-bottom: 0px;
+	margin-left: 0px;
+	margin-right: 0px;
+	min-width: 0px;
+	display: inline-block;
+}
+
+.essay-image {
+	max-width: 100%;
+}
+
+div.show-annotator-dialog {
+	position: absolute;
+	top: 40px;
+	left: 80px;
+	width: 200px;	/* OBS: Precisa modificar tambem em essay_correction.js */
+	height: 100px;  /* OBS: Precisa modificar tambem em essay_correction.js */
+	z-index: 1;
+	border-radius: 15px;
+	border: 2px solid #73AD21;
+	background-color: #F0F0F0;
+	padding: 15px; /* OBS: Precisa modificar tambem em essay_correction.js */
+	box-sizing: content-box;
+	-webkit-box-sizing: content-box;
+}
+
+textarea.show-annotator-dialog-textarea {
+	width: 100%;
+	height: 70%;
+	font-family: "Verdana";
+	font-size: 12px;
+	border-radius: 5px;
+}
+
+button::-moz-focus-inner {   /* Compatibilidade no Firefox */
+	border:0;
+	padding:0;
+}
+
+button.show-annotator-dialog-button {
+	margin-left: 15px;
+	-moz-box-shadow:inset 0px 1px 0px 0px #9acc85;
+	-webkit-box-shadow:inset 0px 1px 0px 0px #9acc85;
+	box-shadow:inset 0px 1px 0px 0px #9acc85;
+	background-color:#74ad5a;
+	border:1px solid #3b6e22;
+	display:inline-block;
+	cursor:pointer;
+	color:#ffffff;
+	font-family:Arial;
+	font-size:12px;
+	font-weight:bold;
+	padding:3px 6px;
+	text-decoration:none;
+}
+
+button.save-button {
+	-moz-box-shadow:inset 0px 1px 0px 0px #4567g5;
+	-webkit-box-shadow:inset 0px 1px 0px 0px #4567g5;
+	box-shadow:inset 0px 1px 0px 0px #4567g5;
+	background-color: #1233e4;
+	border:1px solid #2222FF;
+}
+
+button.delete-button {
+	-moz-box-shadow:inset 0px 1px 0px 0px #f7c5c0;
+	-webkit-box-shadow:inset 0px 1px 0px 0px #f7c5c0;
+	box-shadow:inset 0px 1px 0px 0px #f7c5c0;
+	background-color: #e4685d;
+	border:1px solid #FF2222;
+}
+
+.load-statusbar {
+	background-color: lightgray;
+	position: absolute;
+	font-family: sans-serif;
+	font-weight: bold;
+	padding: 3px;
+	right: 0px;
+	bottom: 0px;
+}

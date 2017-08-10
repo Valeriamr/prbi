@@ -1,0 +1,122 @@
+#takeoff
+	color: #fff
+	background: url(../images/takeoff/takeoff-background.jpg) bottom center no-repeat
+	background-size: cover
+	font-size: 18px
+	position: relative
+
+	.nuvens
+		background: url(../images/takeoff/nuvens.png) bottom center no-repeat
+		position: absolute
+		bottom: 0
+		left: 0
+		height: 80px
+		width: 100%
+		z-index: 99
+
+	&.to-dentro
+		.container
+			height: 350px
+			margin-top: 0
+			background-size: auto 100%
+		h1
+			font-size: 90px
+
+			small
+				font-size: 50px
+
+	.container
+		background: url(../images/takeoff/takeoff-front.png) bottom center no-repeat
+		height: 400px
+		background-size: 100% auto
+		margin-top: 50px
+
+	p
+		font-style: italic
+		font-weight: 300
+
+	h1
+		color: #fff
+		font-weight: 700
+		text-transform: uppercase
+		margin-top: 40px
+		font-size: 60px
+
+		small
+			font-size: 30px
+			font-style: italic
+			font-weight: 300
+			color: #fff
+			display: block
+
+.to-dentro
+	h1, h2
+		font-weight: 700
+		color: #145E75
+
+
+
+
+
+#enem
+	/* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#145e75+0,437e91+100 */
+	background: rgb(20,94,117)
+	background: -moz-linear-gradient(top, rgba(20,94,117,1) 0%, rgba(67,126,145,1) 100%)
+	background: -webkit-linear-gradient(top, rgba(20,94,117,1) 0%,rgba(67,126,145,1) 100%)
+	background: linear-gradient(to bottom, rgba(20,94,117,1) 0%,rgba(67,126,145,1) 100%)
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#145e75', endColorstr='#437e91',GradientType=0 )
+	position: relative
+	padding-bottom: 20px
+
+	.ate-enem
+		background: url(../images/ate-enem.png) top center no-repeat
+		min-height: 450px
+		padding-top: 120px
+		color: #fff
+
+		h1 
+			color: #fff
+			font-weight: 700
+			text-transform: uppercase
+			font-size: 58px
+
+			small
+				display: block
+				color: #fff
+				font-weight: 300
+				font-style: italic
+				text-transform: none
+				font-size: 28px
+	
+
+		.btn
+			box-shadow: 0 7px 10px rgba(0, 0, 0, 0.7)
+
+
+	.nuvens
+		background: url(../images/takeoff/nuvens.png) bottom center no-repeat
+		position: absolute
+		bottom: 0
+		left: 0
+		height: 80px
+		width: 100%
+		z-index: 99
+
+
+
+
+
+
+
+
+@media screen and (max-width: 991px)
+	#takeoff
+		&.to-dentro
+			.container
+				background-size: 100% auto !important
+
+	#enem
+		padding-bottom: 80px
+		.ate-enem
+			padding-top: 60px
+			background: none

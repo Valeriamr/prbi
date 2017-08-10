@@ -1,0 +1,41 @@
+:plain
+  <script type="text/javascript" class="init">
+  $(document).ready(function() {
+    $('#dash').DataTable({
+      language: {
+        search: "Procurar na tabela:"
+      }
+    });
+  } );
+  </script>
+
+
+%table#dash.table.table-striped.table-bordered
+  %thead
+    %tr
+      %th Qualidade Correção
+      %th Tempo de entrega
+      %th Cadastros/mês
+      %th Cadastros/total
+      %th Usuários Ativos Pagantes
+      %th Usuários Ativos Não Pagantes
+      %th Faturamento
+      %th Lucro Bruto
+  %tbody
+    %tr
+      %td{width: '200px'}
+        = @media_feedbacks
+      %td{width: '200px'}
+        = @media_tempo_correcao_dias
+      %td{width: '300px'}
+        = @cadastros
+      %td{width: '300px'}
+        = @cadastros_acumulados
+      %td{width: '300px'}
+        = @usuarios_ativos_pagantes
+      %td{width: '300px'}
+        = @usuarios_ativos - @usuarios_ativos_pagantes
+      %td{width: '300px'}
+        = @faturamento
+      %td{width: '300px'}
+        = @lucro_bruto
