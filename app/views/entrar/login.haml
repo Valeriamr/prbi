@@ -1,18 +1,45 @@
-.container
-  .row
-    .action
-      .col-md-4.col-sm-12{:id=>"login"}
-        .contact-form.bottom
-          %br
-          -if "http://#{request.env['HTTP_HOST']+request.path}" != "http://#{request.env['HTTP_HOST']}/cadastro/notificacoes"
-            = form_tag url(:cadastros,:create),:novalidate=>true,:id=>"loginForm" do
-              .form-group
-                =[:error, :warning, :notice].map { |type| flash_tag(type, :class => "alert alert-danger fade in", :bootstrap => false) }.join.html_safe
-                =email_field_tag :email, :value => params[:email], :class => 'form-control input-lg', :placeholder => 'Email'
-                %label
-                =password_field_tag :password, :value => params[:password], :class => 'form-control input-lg', :placeholder => 'Senha'
-                =text_field_tag :previousurl, :value=> request.path_info=='/entrar'? back : request.path_info, :type=>"hidden"
-                %label
-                =submit_tag('Efetuar login', :class => 'btn btn-submit', :style=>"text-align: center; padding-left: 17px")
-            %br
+!!!
+%html{:lang => "en"}
+  %head
+    %meta{:content => "text/html; charset=UTF-8", "http-equiv" => "Content-Type"}/
+    %title Bootstrap Example
+    %meta{:charset => "utf-8"}/
+    %meta{:content => "width=device-width, initial-scale=1", :name => "viewport"}/
+    %link{:href => "http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css", :rel => "stylesheet"}/
+    %script{:src => "https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"}
+    %script{:src => "http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"}
+    :css
+      /* Set height of the grid so .sidenav can be 100% (adjust as needed) */
+      .row.content {height: 550px}
+
+      /* Set gray background color and 100% height */
+      .sidenav {
+        background-color: #f1f1f1;
+        height: 100%;
+      }
+
+      /* On small screens, set height to 'auto' for the grid */
+      @media screen and (max-width: 767px) {
+        .row.content {height: auto;}
+      }
+  %body
+
+    .container
+      .row
+        .action
+          .col-md-4.col-sm-12{:id=>"login"}
+            .contact-form.bottom
+              %br
+              -if "http://#{request.env['HTTP_HOST']+request.path}" != "http://#{request.env['HTTP_HOST']}/cadastro/notificacoes"
+                = form_tag url(:cadastros,:create),:novalidate=>true,:id=>"loginForm" do
+                  .form-group
+                    =[:error, :warning, :notice].map { |type| flash_tag(type, :class => "alert alert-danger fade in", :bootstrap => false) }.join.html_safe
+                    =email_field_tag :email, :value => params[:email], :class => 'form-control input-lg', :placeholder => 'Email'
+                    %label
+                    =password_field_tag :password, :value => params[:password], :class => 'form-control input-lg', :placeholder => 'Senha'
+                    =text_field_tag :previousurl, :value=> request.path_info=='/entrar'? back : request.path_info, :type=>"hidden"
+                    %label
+                      %br
+                      =submit_tag('Efetuar login', :class => 'btn btn-submit', :style=>"text-align: center; padding-left: 17px")
+                %br
 

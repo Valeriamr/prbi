@@ -3,8 +3,6 @@ Prbi::App.controllers :dashboard do
   get :bi_dashboard do
     soma_feedbacks = 0
     cont = 0
-    ap params
-    ap "1"
     feedback = Voto.where(:por_corretor => true, :feedback_nota.exists => true, :updated_at.gte => params[:data_inicio], :updated_at.lte => params[:data_fim])
     feedback.each do |f|
       if f.feedback_nota != nil

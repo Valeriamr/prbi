@@ -1,41 +1,102 @@
-:plain
-  <script type="text/javascript" class="init">
-  $(document).ready(function() {
-    $('#dash').DataTable({
-      language: {
-        search: "Procurar na tabela:"
+!!!
+%html{:lang => "en"}
+  %head
+    %meta{:content => "text/html; charset=UTF-8", "http-equiv" => "Content-Type"}/
+    %title Bootstrap Example
+    %meta{:charset => "utf-8"}/
+    %meta{:content => "width=device-width, initial-scale=1", :name => "viewport"}/
+    %link{:href => "http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css", :rel => "stylesheet"}/
+    %script{:src => "https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"}
+    %script{:src => "http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"}
+    :css
+      /* Set height of the grid so .sidenav can be 100% (adjust as needed) */
+      .row.content {height: 550px}
+
+      /* Set gray background color and 100% height */
+      .sidenav {
+        background-color: #f1f1f1;
+        height: 100%;
       }
-    });
-  } );
-  </script>
 
+      /* On small screens, set height to 'auto' for the grid */
+      @media screen and (max-width: 767px) {
+        .row.content {height: auto;}
+      }
+  %body
+    %nav.navbar.navbar-inverse.visible-xs
+      .container-fluid
+        .navbar-header
+          %button.navbar-toggle{"data-target" => "#myNavbar", "data-toggle" => "collapse", :type => "button"}
+            %span.icon-bar
+            %span.icon-bar
+            %span.icon-bar
+          %a.navbar-brand{:href => "#"} Dashboard BI
+        #myNavbar.collapse.navbar-collapse
+          %ul.nav.navbar-nav
+            %li.active
+              %a{:href => "#"} Estratégico
+            %li
+              %a{:href => "#"} Funil
+            %li
+              %a{:href => "#"} Tático
+    .container-fluid
+      .row.content
+        .col-sm-3.sidenav.hidden-xs
+          %h2 Dashboard BI
+          %ul.nav.nav-pills.nav-stacked
+            %li.active
+              %a{:href => "#section1"} Estratégico
+            %li
+              %a{:href => "#section2"} Funil
+            %li
+              %a{:href => "#section3"} Tático
+          %br/
+        %br/
+        .col-sm-9
+          .row
+            .col-sm-3
+              .well
+                %h4 Qualidade Correção
+                = @media_feedbacks
+            .col-sm-3
+              .well
+                %h4 Tempo Entrega Correção
+                = @media_tempo_correcao_dias
+                = ' dias'
+          .row
+            .col-sm-3
+              .well
+                %h4 Cadastros/mês
+                = @cadastros
+            .col-sm-3
+              .well
+                %h4 Cadastros/total
+                = @cadastros_acumulados
+          .row
+            .col-sm-3
+              .well
+                %h4 Usuários ativos
+                = @usuarios_ativos
+            .col-sm-3
+              .well
+                %h4 Redações Enviadas
+                = @red_enviadas
+          .row
+            .col-sm-3
+              .well
+                %h4 Usuários ativos Pagantes
+                = @usuarios_ativos_pagantes
+            .col-sm-3
+              .well
+                %h4 Usuários ativos não Pagantes
+                = @usuarios_ativos - @usuarios_ativos_pagantes
+          .row
+            .col-sm-3
+              .well
+                %h4 Faturamento
+                = @faturamento
+            .col-sm-3
+              .well
+                %h4 Lucro Bruto
+                = @lucro_bruto
 
-%table#dash.table.table-striped.table-bordered
-  %thead
-    %tr
-      %th Qualidade Correção
-      %th Tempo de entrega
-      %th Cadastros/mês
-      %th Cadastros/total
-      %th Usuários Ativos Pagantes
-      %th Usuários Ativos Não Pagantes
-      %th Faturamento
-      %th Lucro Bruto
-  %tbody
-    %tr
-      %td{width: '200px'}
-        = @media_feedbacks
-      %td{width: '200px'}
-        = @media_tempo_correcao_dias
-      %td{width: '300px'}
-        = @cadastros
-      %td{width: '300px'}
-        = @cadastros_acumulados
-      %td{width: '300px'}
-        = @usuarios_ativos_pagantes
-      %td{width: '300px'}
-        = @usuarios_ativos - @usuarios_ativos_pagantes
-      %td{width: '300px'}
-        = @faturamento
-      %td{width: '300px'}
-        = @lucro_bruto

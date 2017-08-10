@@ -1,6 +1,6 @@
 Prbi::App.controllers :cadastros do
 
-  get :login, :map => '/login' do
+  get :login, :map => '/' do
       render 'entrar/login'
   end
 
